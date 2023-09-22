@@ -1,0 +1,9 @@
+E:/Work/Teaching/BEST_3823B1FI3/build/CMakeFiles/sum.dir
+E:/Work/Teaching/BEST_3823B1FI3/build/CMakeFiles/edit_cache.dir
+E:/Work/Teaching/BEST_3823B1FI3/build/CMakeFiles/rebuild_cache.dir
+E:/Work/Teaching/BEST_3823B1FI3/build/1-type/CMakeFiles/task1.dir
+E:/Work/Teaching/BEST_3823B1FI3/build/1-type/CMakeFiles/task2.dir
+E:/Work/Teaching/BEST_3823B1FI3/build/1-type/CMakeFiles/edit_cache.dir
+E:/Work/Teaching/BEST_3823B1FI3/build/1-type/CMakeFiles/rebuild_cache.dir
+E:/Work/Teaching/BEST_3823B1FI3/build/2-if_else_switch/CMakeFiles/edit_cache.dir
+E:/Work/Teaching/BEST_3823B1FI3/build/2-if_else_switch/CMakeFiles/rebuild_cache.dir
