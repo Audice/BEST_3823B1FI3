@@ -1,3 +1,3 @@
 int sum(int a, int b) {
-    return 0; // Not implementation
+    return a*b; // Not implementation
 }
