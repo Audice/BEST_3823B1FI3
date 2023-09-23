@@ -156,11 +156,15 @@ jobs:
         run: python3 testscript.py -p ${{github.actor}} -t "1-type" -n
 
       - name: 1-type task1
+        if: always()
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3/build/1-type
-        run: ./task1
+        run: |
+          ./task1
+          python3 testscript.py -p ${{github.actor}} -t "1-type" -m "$(echo $?)"
 
-      - name: 1-type task1
+      - name: 1-type task2
+        if: always()
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3/build/1-type
         run: ./task2
