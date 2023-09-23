@@ -114,6 +114,7 @@ jobs:
           
       - name: Build
         shell: bash
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: cmake --build . --config ${{ matrix.config.build_type }}
 
       - name: See build 2
