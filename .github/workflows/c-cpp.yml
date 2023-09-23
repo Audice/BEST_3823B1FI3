@@ -142,7 +142,9 @@ jobs:
       - name: 0-Begin_Task
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3/build
-        run: ./sum
+        run: |
+          ls
+          ./sum
         
       - name: 0-Begin_Task estimate
         shell: bash
