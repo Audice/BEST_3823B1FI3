@@ -106,13 +106,11 @@ jobs:
         
       - name: Configure
         shell: bash
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: |
           mkdir build
           mkdir instdir
-          cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} \
-            -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
-            -B ./build \
-            -G Ninja
+          cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -B ./build -G Ninja
           
       - name: Build
         shell: bash
