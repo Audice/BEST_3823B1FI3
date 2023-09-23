@@ -141,9 +141,7 @@ jobs:
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: |
-          ls
-          cd build/
-          ./sum
+          ./build/sum
           python3 testscript.py -p ${{github.actor}} -t "0-Begin_Task" -r "$(echo $?)" -m 100
 
       - name: 1-type clear
@@ -154,17 +152,17 @@ jobs:
       - name: 1-type task1
         if: always()
         shell: bash
-        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3/build/1-type
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: |
-          ./task1
+          ./build/1-type/task1
           python3 testscript.py -p ${{github.actor}} -t "1-type" -r "$(echo $?)" -m 10
 
       - name: 1-type task2
         if: always()
         shell: bash
-        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3/build/1-type
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: |
-          ./task2
+          ./build/1-type/task2
           python3 testscript.py -p ${{github.actor}} -t "1-type" -r "$(echo $?)" -m 20
 
       - name: Upload release asset
