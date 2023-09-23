@@ -119,6 +119,12 @@ jobs:
         shell: bash
         run: cmake --build . --config ${{ matrix.config.build_type }}
 
+      - name: See build 2
+        if: always()
+        shell: bash
+        working-directory: /home/runner/work/EST_3823B1FI3/BEST_3823B1FI3
+        run: ls
+
       - name: Very hard setting
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
