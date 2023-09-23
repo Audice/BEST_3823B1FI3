@@ -128,7 +128,7 @@ jobs:
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: |
           pip install gdown
-          gdown 1FIdkKmyJxxWqx-I8LiyMUNy3qtHOabvD
+          gdown 1aQT78ya0EwUrmpAXYOn4f_DD39YPwa6Y
           gdown 1L6dRqWVmXx5V16C0sQXFQUK43PBfJ4hX
           ls
 
@@ -144,11 +144,7 @@ jobs:
           ls
           cd build/
           ./sum
-        
-      - name: 0-Begin_Task estimate
-        shell: bash
-        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
-        run: python3 testscript.py -p ${{github.actor}} -t "0-Begin_Task" -m 100
+          python3 testscript.py -p ${{github.actor}} -t "0-Begin_Task" -r "$(echo $?)" -m 100
 
       - name: 1-type clear
         shell: bash
@@ -161,18 +157,15 @@ jobs:
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3/build/1-type
         run: |
           ./task1
-          python3 testscript.py -p ${{github.actor}} -t "1-type" -m "$(echo $?)"
+          python3 testscript.py -p ${{github.actor}} -t "1-type" -r "$(echo $?)" -m 10
 
       - name: 1-type task2
         if: always()
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3/build/1-type
-        run: ./task2
-        
-      - name: 1-type estimate
-        shell: bash
-        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
-        run: python3 testscript.py -p ${{github.actor}} -t "1-type" -m 100
+        run: |
+          ./task2
+          python3 testscript.py -p ${{github.actor}} -t "1-type" -r "$(echo $?)" -m 20
 
       - name: Upload release asset
         if: github.event_name == 'release' && (github.event.action == 'published' || github.event.action == 'created')
