@@ -7,7 +7,7 @@ void test_simple() {
     TEST_ASSERT(sum(6, 7) == -1);
     TEST_ASSERT(sum(100, 101) == -1);
     TEST_ASSERT(sum(-5, 5) == -10);
-    TEST_ASSERT(sum(34, 0) == 0);
+    TEST_ASSERT(sum(34, 0) == 34);
 }
 
 TEST_LIST= {
