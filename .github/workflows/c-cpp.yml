@@ -149,22 +149,26 @@ jobs:
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: python3 testscript.py -p ${{github.actor}} -t "0-Begin_Task" -m 100
-        
-      - name: Install Strip
-        shell: bash
-        run: cmake --install . --strip
 
-      - name: Pack
+      - name: 1-type clear
         shell: bash
-        working-directory: instdir
-        run: |
-          ls -laR
-          ${{ matrix.config.archiver }} ../${{ matrix.config.artifact }} .
-      - name: Upload
-        uses: actions/upload-artifact@v1
-        with:
-          path: ./${{ matrix.config.artifact }}
-          name: ${{ matrix.config.artifact }}
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
+        run: python3 testscript.py -p ${{github.actor}} -t "1-type" -n
+
+      - name: 1-type task1
+        shell: bash
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3/build/1-type
+        run: ./task1
+
+      - name: 1-type task1
+        shell: bash
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3/build/1-type
+        run: ./task2
+        
+      - name: 1-type estimate
+        shell: bash
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
+        run: python3 testscript.py -p ${{github.actor}} -t "1-type" -m 100
 
       - name: Upload release asset
         if: github.event_name == 'release' && (github.event.action == 'published' || github.event.action == 'created')
