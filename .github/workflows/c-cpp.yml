@@ -133,11 +133,13 @@ jobs:
           ls
 
       - name: 0-Begin_Task clear
+        if: always()
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: python3 testscript.py -p ${{github.actor}} -t "0-Begin_Task" -n
 
       - name: 0-Begin_Task
+        if: always()
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: |
@@ -145,6 +147,7 @@ jobs:
           python3 testscript.py -p ${{github.actor}} -t "0-Begin_Task" -r "$(echo $?)" -m 100
 
       - name: 1-type clear
+        if: always()
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: python3 testscript.py -p ${{github.actor}} -t "1-type" -n
