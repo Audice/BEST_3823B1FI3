@@ -20,6 +20,7 @@ void test_deadline() {
     TEST_ASSERT(get_score(1111, 4326, 5678, 4876) == 886);
     TEST_ASSERT(get_score(1111, 4326, 5678, 4991) == 838);
     TEST_ASSERT(get_score(1111, 4326, 5678, 5679) == 556);
+
 }
 
 TEST_LIST = {
