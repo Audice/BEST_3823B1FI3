@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "change.h": "c",
+        "quadratic_equation.h": "c",
+        "monthday.h": "c"
+    }
+}
