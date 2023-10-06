@@ -223,6 +223,22 @@ jobs:
         run: |
           ./build/1-type/deadline
           python3 testscript.py -p ${{github.actor}} -t "1-type" -r "$(echo $?)" -m 10
+
+
+
+      - name: 2-if_else_switch clear
+        if: always()
+        shell: bash
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
+        run: python3 testscript.py -p ${{github.actor}} -t "2-if_else_switch" -n
+
+      - name: 2-if_else_switch Change
+        if: always()
+        shell: bash
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
+        run: |
+          ./build/2-if_else_switch/change
+          python3 testscript.py -p ${{github.actor}} -t "2-if_else_switch" -r "$(echo $?)" -m 10
           
       - name: Upload release asset
         if: github.event_name == 'release' && (github.event.action == 'published' || github.event.action == 'created')
