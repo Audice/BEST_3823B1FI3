@@ -280,6 +280,7 @@ jobs:
           python3 fill_magazine.py -t "twoboxes" -r "$(echo $?)"
           
       - name: Estimate
+        if: always()
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: python3 testscript.py -p ${{github.actor}}
