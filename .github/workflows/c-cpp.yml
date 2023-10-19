@@ -123,16 +123,21 @@ jobs:
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: ls
 
-      - name: Very hard setting
+      - name: Very hard setting load json
         shell: bash
         working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
         run: |
           pip install pandas
           pip install gdown
+          gdown 1L6dRqWVmXx5V16C0sQXFQUK43PBfJ4hX
+
+      - name: Load magscr, tstscr, mag
+        shell: bash
+        working-directory: /home/runner/work/BEST_3823B1FI3/BEST_3823B1FI3
+        run: |
+          gdown 1VLNuCVgDOw6PMqHMIsBl5xoYjYmPbCEK
           gdown 1qFuKKr6acDVp3JMEy1VaIqIgsfpAA2xD
-          gdown 1owuxT_MMb1EJQQI4qyrMpl_wPHgV6p92
-          gdown 15dUhLClYC66OtluGw0Xwej4TK4d5YZP6
-          gdown 16hhW-MiiHFEKbhKzwli2twAVJjHuGNHg
+          gdown 129gQ_wu82M4eud8mgmp8_C4jwA5TqRKa
           ls
 
       - name: 0-Begin_Task
