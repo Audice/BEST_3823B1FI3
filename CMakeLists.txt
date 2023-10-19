@@ -6,5 +6,7 @@ include_directories(utils)
 
 add_subdirectory(1-type)
 add_subdirectory(2-if_else_switch)
+add_subdirectory(3-loop)
+
 
 add_executable(sum 0-Begin_Task/test.c)
